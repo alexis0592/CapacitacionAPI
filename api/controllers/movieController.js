@@ -28,7 +28,7 @@ exports.create_a_movie = function(req, res){
     });
 };
 
-//Borrar una película
+//función para Borrar una película
 exports.delete_a_movie = function(req, res){
     Movie.remove({
         _id : req.params.movieId
