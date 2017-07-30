@@ -3,9 +3,12 @@
   "version": "1.0.0",
   "description": "API capacitacion Angular2 Virtuales y Movilidad",
   "main": "server.js",
+  "engines": {
+    "node": "6.11.1"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server.js"
+    "start": "node server.js"
   },
   "keywords": [
     "Api",
