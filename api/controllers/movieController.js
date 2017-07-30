@@ -5,6 +5,13 @@ var mongoose = require('mongoose'),
 
 //Metodos
 
+exports.api_available = function(req, res){
+    res.status(200).send({
+        success:200,
+        message: 'API Available'
+    });
+};
+
 //listar todas las películas
 exports.list_all_movies = function(req, res){
     Movie.find({}, function(err, movie){
