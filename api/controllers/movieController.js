@@ -28,11 +28,19 @@ exports.create_a_movie = function(req, res){
     });
 };
 
+exports.update_a_movie = function(req, res){
+    Movie.findOneAndUpdate({_id:req.params.movieId}, req.body,{new: true}, function(err, movie){
+        if(err){
+            res.send(err);
+        }       
+
+        res.json(movie);
+    });
+};
+
 //función para Borrar una película
 exports.delete_a_movie = function(req, res){
-    Movie.remove({
-        _id : req.params.movieId
-    }, function(err, movie){
+    Movie.remove({ _id : req.params.movieId}, function(err, movie){
         if(err){
             res.send(err);
         }

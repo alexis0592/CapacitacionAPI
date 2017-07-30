@@ -9,6 +9,7 @@ module.exports = function(app){
         .post(movieController.create_a_movie);
 
     app.route('/movies/:movieId')
+        .put(movieController.update_a_movie)
         .delete(movieController.delete_a_movie);
 };
 

@@ -7,7 +7,8 @@ var express = require("express"),
     bodyParser = require('body-parser'),
     routes = require('./api/routes/moviesRoutes');
 
-var dbPath = 'mongodb://localhost/Moviesdb';
+//var dbPath = 'mongodb://localhost/Moviesdb';
+var dbPath = 'mongodb://heroku_097rwx1n:kqqqs4l3426531qn8llmre67q5@ds127983.mlab.com:27983/heroku_097rwx1n'
 
 mongoose.Promise = global.Promise;
 mongoose.connect(dbPath, {
