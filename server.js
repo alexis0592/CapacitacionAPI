@@ -1,6 +1,6 @@
 var express = require("express"),
     app = express(),
-    port = process.env.port || 3000,
+    port = process.env.PORT || 5000,
     mongoose = require('mongoose'),
     Mogoclient = require('mongodb').MongoClient,
     Movie = require('./api/models/movieModel'),
