@@ -29,7 +29,7 @@ var MovieSchema = new Schema({
         required:true
     },
     imagePath:{
-        type:string,
+        type:String,
         required:false
     },
     created_at:{
