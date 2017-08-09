@@ -8,7 +8,9 @@ module.exports = function(app){
         .get(movieController.api_available);
 
     app.route('/movies')
-        .get(movieController.list_all_movies)
+        .get(movieController.list_all_movies);
+
+    app.route('/movies')
         .post(movieController.create_a_movie);
 
     app.route('/movies/:movieId')
