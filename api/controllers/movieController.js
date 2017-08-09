@@ -25,12 +25,14 @@ exports.list_all_movies = function(req, res){
 
 //crear una película
 exports.create_a_movie = function(req, res){
+    console.log('ingrese a crear movie')
     var new_movie = new Movie(req.body);
     new_movie.save(function(err, movie){
         if(err){
+            console.log(err);
             res.send(err);
         }
-
+        console.log('success');
         res.json(movie);
     });
 };
